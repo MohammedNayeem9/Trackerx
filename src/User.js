@@ -9,7 +9,7 @@ function LoginFrom(){
     const [isAuthenticated, setIsAuthenticated] = useState(false);
   
     const handleLogin = () => {
-      // Perform phone number verification with OTP
+      // default phone number OTP verification
       if (otp === '123456') {
         setIsAuthenticated(true);
       } else {
@@ -18,7 +18,7 @@ function LoginFrom(){
     };
 return(
         <>
-                    {!isAuthenticated ? (
+      {!isAuthenticated ? (
                         <>
                         <div class="form">
                             <h1>Track Xpress</h1>
@@ -33,11 +33,11 @@ return(
     </form>
     </div>
     </>
-                ):(
-                    <div>
-                        {/* Display*/}
+         ):(
+                 <div>
+                        {/* Displaying the Map from apikey*/}
                         <MapContainer />
-                    </div>
+                  </div>
                 )}
                 </>
 )
